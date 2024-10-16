@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento de Sistemas - Carreira Promissora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'San Francisco';
+            src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff');
+        }
+        body {
+            font-family: 'San Francisco', 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ff5050' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .header {
+            background-color: #ff3333;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .section {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 40px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff3333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        h1, h2 {
+            color: #333333;
+            margin-bottom: 20px;
+            font-family: 'San Francisco', sans-serif;
+        }
+        h3 {
+            color: #ff3333;
+            font-family: 'San Francisco', sans-serif;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ff3333;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #ff5555;
+            transform: scale(1.05);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border-left: 4px solid #ff3333;
+        }
+        li:hover {
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+            border: 3px solid #ff3333;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            color: #ff3333;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ff5555;
+            transform: scale(1.2);
+        }
+        .professor-card {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .professor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .professor-info {
+            margin-left: 20px;
+        }
+        .professor-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #ff3333;
+        }
+        .professor-email {
+            color: #666;
+            font-size: 14px;
+        }
+        .recommended-accounts {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .recommended-accounts h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff3333;
+        }
+        .account-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .account-item {
+            text-align: center;
+            width: 150px;
+            transition: transform 0.3s ease;
+        }
+        .account-item:hover {
+            transform: scale(1.05);
+        }
+        .account-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #ff3333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        .decorative-line {
+            height: 3px;
+            background: linear-gradient(to right, #ff3333, #ff5555, #ff3333);
+            margin: 20px 0;
+        }
+        .quote {
+            font-style: italic;
+            color: #666;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 4px solid #ff3333;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header fade-in">
+        <h1>Desenvolvimento de Sistemas: A Escolha Certa para sua Carreira</h1>
+        <p>Descubra as oportunidades no mercado de TI no Brasil</p>
+    </div>
+    <div class="main-content">  
+        <div class="section fade-in">
+            <h2>Matriz Curricular</h2>
+            <div class="decorative-line"></div>
+            <h3>1º DS</h3>
+            <p><strong>Base comum:</strong> Ed. Física, Arte, L. Inglesa, L. Portuguesa, Matemática, Física, Química, História</p>
+            <p><strong>Curso:</strong> PWI, BDI, TPA, APS, FI, DD</p>
+            
+            <h3>2º DS</h3>
+            <p><strong>Base comum:</strong> Ed. Física, L. Portuguesa, L. Inglesa, Matemática, Física, Química, Biologia, História, Geografia</p>
+            <p><strong>Curso:</strong> PWII, BDII, Desenvolvimento de Sistemas, Ética e Cidadania Organizacional, Programação de Aplicativos Mobile I</p>
+            
+            <h3>3º DS</h3>
+            <p><strong>Base comum:</strong> L. Portuguesa, L. Inglesa, L. Espanhola, Matemática, Biologia, Geografia, Filosofia, Sociologia</p>
+            <p><strong>Curso:</strong> PWIII, Programação de Aplicativos Mobile II, Internet, Protocolos e Segurança de Sistemas da Informação, Planejamento e Desenvolvimento do Trabalho de Conclusão de Curso (TCC) em Desenvolvimento de Sistemas, Qualidade e Teste de Software, Sistemas Embarcados</p>
+            <a href="ementa.zip" class="cta-button">Baixar Ementa Completa</a>
+        </div>
+        <div class="section fade-in">
+            <h2>Contatos (Etec. João Belarmino)</h2>
+            <div class="decorative-line"></div>
+            <p><i class="fas fa-phone"></i> <strong>Telefone:</strong> (19) 3807-2288 | 3807-8982 | 3808-1016</p>
+            <p><i class="fas fa-envelope"></i> <strong>Coordenadora:</strong> elaine.almeida23@etec.sp.gov.br</p>
+            <p><i class="fas fa-envelope"></i> <strong>Dir. Acadêmica:</strong> e067acad@cps.sp.gov.br</p>
+            <p><i class="fas fa-envelope"></i> <strong>Dir. Serviços:</strong> e067adm@cps.sp.gov.br</p>
+            <p><i class="fas fa-envelope"></i> <strong>APM:</strong> apmjb@yahoo.com.br</p>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Redes Sociais</h2>
+            <div class="decorative-line"></div>
+            <ul>
+                <li><i class="fab fa-instagram"></i> <strong>Instagram:</strong> @ds.etec</li>
+                <li><i class="fas fa-link"></i> <strong>LinkTree:</strong> /ds.etec</li>
+                <li><i class="fab fa-youtube"></i> <strong>Youtube (Etec):</strong> @ETECJoaoBelarminoOFICIAL</li>
+            </ul>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Coordenação</h2>
+            <div class="decorative-line"></div>
+            <div class="professor-card">
+                <img src="./laine.png" alt="Elaine">
+                <div class="professor-info">
+                    <p class="professor-name">Elaine Cristina de Almeida Zanin</p>
+                    <p class="professor-email">elaine.almeida23@etec.sp.gov.br</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Professores - DS</h2>
+            <div class="decorative-line"></div>
+            <ul>
+                <li>
+                    <div class="professor-card">
+                        <img src="emerson.PNG" alt="Emerson">
+                        <div class="professor-info">
+                            <h3>Emerson Rodrigo Baião</h3>
+                            <p><strong>E-mail:</strong> emerson.baiao@etec.sp.gov.br</p>
+                            <p>Graduação em Análise e Desenvolvimento de Sistemas, Licenciatura em Informática e Pedagogia. Especialização em Redes de Computadores e Psicopedagogia. Mestre em Educação e cursando Doutorado em Educação pela Unicamp.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="professor-card">
+                        <img src="rubens.PNG" alt="Rubens">
+                        <div class="professor-info">
+                            <h3>Rubens Castaldelli Carlos</h3>
+                            <p><strong>E-mail:</strong> rubens.carlos@etec.sp.gov.br</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="professor-card">
+                        <img src="vania.PNG" alt="Vania">
+                        <div class="professor-info">
+                            <h3>Vania Helen Morandi Brunetto</h3>
+                            <p><strong>E-mail:</strong> vania.morandi01@etec.sp.gov.br</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="professor-card">
+                        <img src="fernando.PNG" alt="Fernando">
+                        <div class="professor-info">
+                            <h3>Fernando Bartholomeu Reis Da Silva Cunha</h3>
+                            <p><strong>E-mail:</strong> Fernando.cunha18@etec.sp.gov.br</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="professor-card">
+                        <img src="./giu.png" alt="Giuliano">
+                        <div class="professor-info">
+                            <h3>Giuliano Catelli</h3>
+                            <p><strong>E-mail:</strong> profgcatelli@hotmail.com</p>
+                            <p>Especialista em análise de sistemas COBOL, Linc II e LDA. Experiência em modelagem de dados, DFD, programação e manutenção de sistemas bancários e financeiros.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="professor-card">
+                        <img src="sergio.PNG" alt="Sergio">
+                        <div class="professor-info">
+                            <h3>Sergio Roberto De Souza</h3>
+                            <p><strong>E-mail:</strong> sergio.souza89@etec.sp.gov.br</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="section fade-in">
+            <h2>Localização</h2>
+            <div class="decorative-line"></div>
+            <p><i class="fas fa-map-marker-alt"></i> R. Sete de Setembro, 299 - Centro, Amparo – SP</p>
+            <p><i class="fas fa-envelope"></i> CEP: 13900-372</p>
+        </div>
+        <div class="section fade-in">
+            <h2>Emprego na Área de TI no Brasil</h2>
+            <div class="decorative-line"></div>
+            <h3>Vagas Disponíveis</h3>
+            <p>O Brasil deve gerar quase 420 mil novas vagas em TI até 2025. Contudo, ainda é difícil encontrar profissionais qualificados para preencher essas posições. Um exemplo é uma empresa em Fortaleza, onde 50 das 60 vagas abertas são na área de tecnologia.</p>
+            
+            <h3>Setor com Mais Vagas</h3>
+            <p>O mercado de TI possui mais de 1,2 milhão de vagas, com previsão de 540 mil novos profissionais necessários até 2025.</p>
+            
+            <h3>Áreas com Mais Vagas</h3>
+            <ul>
+                <li><i class="fas fa-shield-alt"></i> Segurança da Informação</li>
+                <li><i class="fas fa-code"></i> Desenvolvimento de Software</li>
+                <li><i class="fas fa-server"></i> Infraestrutura de TI</li>
+                <li><i class="fas fa-user-circle"></i> User Experience (UX)</li>
+                <li><i class="fas fa-chart-bar"></i> Análise de Business Intelligence</li>
+            </ul>
+            
+            <h3>Profissões Mais Procuradas</h3>
+            <ul>
+                <li><i class="fas fa-database"></i> DBA (Database Administrator)</li>
+                <li><i class="fas fa-laptop-code"></i> Desenvolvedores (Java, PHP, .NET, Delphi)</li>
+                <li><i class="fas fa-headset"></i> Suporte Técnico</li>
+                <li><i class="fas fa-chart-line"></i> Analista de Business Intelligence</li>
+                <li><i class="fas fa-cogs"></i> Engenheiro de Software</li>
+                <li><i class="fab fa-java"></i> Arquiteto Java</li>
+                <li><i class="fas fa-paint-brush"></i> Web Designer</li>
+            </ul>
+            
+            <h3>Salários</h3>
+            <p>Salário Base: R$ 2.000 - R$ 6.000/mês; média de R$ 3.000/mês.</p>
+            <p>Salários Específicos (exemplos):</p>
+            <ul>
+                <li>DBA: R$ 3.922,33 (Júnior) a R$ 8.376,33 (Sênior)</li>
+                <li>Analista de Sistemas: R$ 4.761,33 (Júnior) a R$ 7.620,33 (Sênior)</li>
+                <li>Programador Java: R$ 2.500,00 (Júnior) a R$ 5.500,00 (Sênior)</li>
+            </ul>
+            
+            <h3>Inteligência Artificial (IA)</h3>
+            <p><strong>Definição:</strong> IA abrange sistemas que realizam tarefas complexas. Machine learning (ML) é uma subárea que foca em sistemas que aprendem com dados.</p>
+            <p><strong>Uso na Empresa:</strong> A IA melhora a produtividade ao automatizar tarefas e analisar grandes volumes de dados.</p>
+            <p><strong>Exemplos de Aplicação:</strong> Netflix utiliza ML para personalização, resultando em crescimento significativo de sua base de clientes.</p>
+            
+            <h3>Uso da IA nas Empresas</h3>
+            <p>Principais usos:</p>
+            <ul>
+                <li><i class="fas fa-shield-alt"></i> Detectar intrusões de segurança (44%)</li>
+                <li><i class="fas fa-tools"></i> Resolver problemas técnicos (41%)</li>
+                <li><i class="fas fa-industry"></i> Reduzir trabalho de gerenciamento de produção (34%)</li>
+                <li><i class="fas fa-check-circle"></i> Avaliar conformidade com fornecedores (34%)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="recommended-accounts fade-in">
+        <h2>Contas Recomendadas</h2>
+        <div class="decorative-line"></div>
+        <div class="account-list">
+            <div class="account-item">
+                <img src="emerson.PNG" alt="Emerson">
+                <p>@emerson_baiao</p>
+            </div>
+            <div class="account-item">
+                <img src="./laine.png" alt="Elaine">
+                <p>@elaine_almeida</p>
+            </div>
+            <div class="account-item">
+                <img src="rubens.PNG" alt="Rubens">
+                <p>@rubens_carlos</p>
+            </div>
+            <div class="account-item">
+                <img src="vania.PNG" alt="Vania">
+                <p>@vania_morandi</p>
+            </div>
+            <div class="account-item">
+                <img src="fernando.PNG" alt="Fernando">
+                <p>@fernando_cunha</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="quote">
+        "A tecnologia é melhor quando ela reúne as pessoas." - Matt Mullenweg
+    </div>
+</body>
+</html>
